@@ -1,0 +1,3 @@
+<h3>Profil Saya</h3>
+<?php $flash = getFlash(); if ($flash): ?><div class="alert alert-<?= $flash['type'] ?>"><?= e($flash['message']) ?></div><?php endif; ?>
+<div class="dh-card-simple mt-3"><form method="POST" action="<?= url('dashboard/profile') ?>"><div class="mb-3"><label class="form-label">Nama</label><input name="nama" class="form-control" value="<?= e($_SESSION['user_nama'] ?? '') ?>"></div><div class="mb-3"><label class="form-label">Email</label><input name="email" class="form-control" value="<?= e($_SESSION['user_email'] ?? '') ?>"></div><button class="btn dh-btn-primary">Simpan</button></form></div>
